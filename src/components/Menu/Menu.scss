@@ -1,0 +1,25 @@
+.menu{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    &-btns{
+        margin-right: 40px;
+    }
+    &-dona{
+        background-color:red;
+        color: whitesmoke;
+        &:hover{
+            background-color: rgb(241, 62, 62);
+        }
+    }
+    &-icons{
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+.logo{
+    width: 75px;
+    height: 75px;
+}

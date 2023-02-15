@@ -1,5 +1,11 @@
+import EventsList from 'components/EventsList/EventsList'
+
 type Props = {}
 const Home = (props: Props) => {
-    return <div>Home</div>
+    return (
+        <div>
+            <EventsList />
+        </div>
+    )
 }
 export default Home

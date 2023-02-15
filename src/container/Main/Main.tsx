@@ -1,11 +1,12 @@
+import { Container } from '@mui/material'
 import Home from 'pages/Home/Home'
 
 type Props = {}
 const Main = (props: Props) => {
     return (
-        <div>
+        <Container sx={{ padding: '30px 0' }}>
             <Home />
-        </div>
+        </Container>
     )
 }
 export default Main
