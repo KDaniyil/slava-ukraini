@@ -1,0 +1,15 @@
+.slide{
+    position: relative;
+    img{
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+    }
+    h3{
+        position: absolute;
+        color: whitesmoke;
+        top: 50px;
+        left: 20px;
+        font-size: 30px;
+    }
+}

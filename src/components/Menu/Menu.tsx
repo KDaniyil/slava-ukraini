@@ -1,8 +1,7 @@
 import { Button } from '@mui/material'
-import FacebookIcon from '@mui/icons-material/Facebook'
-import InstagramIcon from '@mui/icons-material/Instagram'
 import './Menu.scss'
 import Logo from 'components/Logo/Logo'
+import MenuIcons from 'components/MenuIcons/MenuIcons'
 
 type Props = {}
 const Menu = (props: Props) => {
@@ -19,10 +18,7 @@ const Menu = (props: Props) => {
                     DONA
                 </Button>
             </div>
-            <div className="menu-icons">
-                <FacebookIcon color="primary" fontSize="large" />
-                <InstagramIcon color="secondary" fontSize="large" />
-            </div>
+            <MenuIcons />
         </div>
     )
 }

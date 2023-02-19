@@ -6,20 +6,13 @@
         margin-right: 40px;
     }
     &-dona{
+        margin-left: 20px;
         background-color:red;
-        color: whitesmoke;
         &:hover{
             background-color: rgb(241, 62, 62);
+            transform: scale(1.5);
+            transition: all .3s ease;
         }
     }
-    &-icons{
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-}
-.logo{
-    width: 75px;
-    height: 75px;
+    
 }

@@ -5,7 +5,7 @@ import Menu from 'components/Menu/Menu'
 type Props = {}
 const Header = (props: Props) => {
     return (
-        <AppBar position="sticky" className="app-bar">
+        <AppBar position="static" className="app-bar">
             <Container>
                 <Toolbar>
                     <IconButton
