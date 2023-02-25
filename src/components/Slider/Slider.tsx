@@ -40,9 +40,9 @@ const Slider = (props: Props) => {
             onSlideChange={() => console.log('slide change')}
             onSwiper={(swiper) => console.log(swiper)}
         >
-            {slidesArray.map((slide) => {
+            {slidesArray.map((slide, index) => {
                 return (
-                    <SwiperSlide>
+                    <SwiperSlide key={index}>
                         <SliderItem slide={slide} />
                     </SwiperSlide>
                 )

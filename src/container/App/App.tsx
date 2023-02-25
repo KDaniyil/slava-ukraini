@@ -2,7 +2,9 @@ import CssBaseline from '@mui/material/CssBaseline'
 import { StyledEngineProvider } from '@mui/material/styles'
 import Footer from 'container/Footer/Footer'
 import Header from 'container/Header/Header'
+import AboutUs from 'pages/AboutUs/AboutUs'
 import Home from 'pages/Home/Home'
+import SinglePost from 'pages/SinglePost/SinglePost'
 
 type Props = {}
 const App = (props: Props) => {
@@ -11,7 +13,7 @@ const App = (props: Props) => {
             <StyledEngineProvider injectFirst>
                 <CssBaseline />
                 <Header />
-                <Home />
+                <AboutUs />
                 <Footer />
             </StyledEngineProvider>
         </>
