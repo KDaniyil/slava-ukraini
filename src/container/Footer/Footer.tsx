@@ -1,12 +1,16 @@
 import { Container } from '@mui/material'
-import FooterMenu from 'components/FooterMenu/FooterMenu'
+import Logo from 'components/Logo/Logo'
+import MenuIcons from 'components/MenuIcons/MenuIcons'
 import './Footer.scss'
 type Props = {}
 const Footer = (props: Props) => {
     return (
         <div className="footer">
             <Container>
-                <FooterMenu />
+                <div className="footerMenu">
+                    <Logo />
+                    <MenuIcons />
+                </div>
             </Container>
         </div>
     )

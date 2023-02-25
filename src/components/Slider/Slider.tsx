@@ -1,10 +1,18 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper'
+import {
+    Navigation,
+    Pagination,
+    Scrollbar,
+    A11y,
+    Autoplay,
+    EffectFade,
+} from 'swiper'
 import 'swiper/scss'
 import 'swiper/scss/navigation'
 import 'swiper/scss/pagination'
 import 'swiper/scss/scrollbar'
 import 'swiper/scss/autoplay'
+import 'swiper/scss/effect-fade'
 import SliderItem from './SliderItem'
 import './Slider.scss'
 import 'utils/slides.ts'
@@ -13,10 +21,18 @@ type Props = {}
 const Slider = (props: Props) => {
     return (
         <Swiper
-            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            modules={[
+                Navigation,
+                Pagination,
+                Scrollbar,
+                A11y,
+                Autoplay,
+                EffectFade,
+            ]}
+            effect={'fade'}
             navigation={true}
             loop={true}
-            autoplay={true}
+            autoplay={{ delay: 2500 }}
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
             spaceBetween={50}
@@ -24,10 +40,10 @@ const Slider = (props: Props) => {
             onSlideChange={() => console.log('slide change')}
             onSwiper={(swiper) => console.log(swiper)}
         >
-            {slidesArray.map(({ image, title }) => {
+            {slidesArray.map((slide) => {
                 return (
                     <SwiperSlide>
-                        <SliderItem image={image} title={title} />
+                        <SliderItem slide={slide} />
                     </SwiperSlide>
                 )
             })}

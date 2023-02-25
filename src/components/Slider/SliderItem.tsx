@@ -1,12 +1,16 @@
+import { Slides } from 'utils/slides'
+
 type Props = {
-    image: string
-    title: string
+    slide: Slides
 }
-function SliderItem({ image, title }: Props) {
+function SliderItem({ slide }: Props) {
     return (
         <div className="slide">
-            <img src={image} alt={title} />
-            <h3>{title}</h3>
+            <img src={slide.image} alt={slide.title} />
+            <div className="slide-description">
+                <h3>{slide.title}</h3>
+                <p>{slide.text}</p>
+            </div>
         </div>
     )
 }

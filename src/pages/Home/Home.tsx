@@ -1,4 +1,4 @@
-import EventsList from 'components/PostsList/EventsList'
+import EventsList from 'components/EventsList/EventsList'
 import Slider from 'components/Slider/Slider'
 
 type Props = {}
