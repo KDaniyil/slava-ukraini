@@ -5,8 +5,8 @@ type Props = {}
 function MenuIcons({}: Props) {
     return (
         <div className="menu-icons">
-            <FacebookIcon className="icon-fb" fontSize="large" />
-            <InstagramIcon className="icon-insta" fontSize="large" />
+            <p>Follow Us</p>
+            <FacebookIcon className="icon-fb" fontSize="medium" />
         </div>
     )
 }

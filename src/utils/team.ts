@@ -14,33 +14,34 @@ export const teamArray: Team[] = [
     },
     {
         id: 2,
+        name: "Maksim Domchuk",
+        job: "Vice Presidente",
+        image: "/images/team/Maksim_Domchuk.jpg"
+    },
+    {
+        id: 3,
         name: "Roman Korniychuk",
         job: "Tesoriere",
         image: "/images/team/Roman_Korniychuk.jpg"
     },
     {
-        id: 3,
-        name: "Oksana Andriichuk",
-        job: "Attivista",
-        image: "/images/team/Oksana_Andriichuk.jpg"
+        id: 4,
+        name: "Paolo Baran",
+        job: "Segretario",
+        image: "/images/team/Paolo_Baran.jpg"
     },
     {
-        id: 4,
+        id: 5,
         name: "Tetiana Drohomeretska",
         job: "Attivista",
         image: "/images/team/Tetiana_Drohomeretska.jpg"
     },
-    {
-        id: 5,
-        name: "Paolo Baran",
-        job: "Attivista",
-        image: "/images/team/Paolo_Baran.jpg"
-    },
+    
     {
         id: 6,
-        name: "Maksim Domchuk",
+        name: "Oksana Andriichuk",
         job: "Attivista",
-        image: "/images/team/Maksim_Domchuk.jpg"
+        image: "/images/team/Oksana_Andriichuk.jpg"
     },
     {
         id: 7,

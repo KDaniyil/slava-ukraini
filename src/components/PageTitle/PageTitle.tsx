@@ -1,0 +1,21 @@
+import { Typography } from '@mui/material'
+import './PageTitle.scss'
+
+type Props = {
+    title: string
+}
+function PageTitle({ title }: Props) {
+    return (
+        <>
+            <Typography
+                variant="h2"
+                component="h2"
+                align="center"
+                className="page-title"
+            >
+                {title}
+            </Typography>
+        </>
+    )
+}
+export default PageTitle

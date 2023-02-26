@@ -1,18 +1,10 @@
-.menu{
-    display: flex;
-    width: 100%;
-    align-items: center;
-    &-btns{
-        margin-right: 40px;
+.btn-dona{
+    margin-left: 50px;
+    transition: all .5s ease;
+    background-color:red;
+    &:hover{
+        background-color: rgb(241, 62, 62);
+        transform: scale(1.5);
+        transition: all .5s ease;
     }
-    &-dona{
-        margin-left: 20px;
-        background-color:red;
-        &:hover{
-            background-color: rgb(241, 62, 62);
-            transform: scale(1.5);
-            transition: all .3s ease;
-        }
-    }
-    
 }

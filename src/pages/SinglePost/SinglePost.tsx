@@ -1,6 +1,7 @@
 import './SinglePost.scss'
-import { Container, Typography } from '@mui/material'
+import { Container } from '@mui/material'
 import { Post } from 'utils/posts'
+import PageTitle from 'components/PageTitle/PageTitle'
 
 type Props = {
     post: Post
@@ -8,9 +9,7 @@ type Props = {
 function SinglePost({ post }: Props) {
     return (
         <Container className="single-post">
-            <Typography variant="h2" component="h2" align="center">
-                {post.title}
-            </Typography>
+            <PageTitle title={post.title} />
             <div className="single-post-content">
                 <div className="single-post-image">
                     <img src={post.image} alt={post.title} />

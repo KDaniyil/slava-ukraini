@@ -1,4 +1,5 @@
-import { Typography, Grid, Container } from '@mui/material'
+import { Grid, Container } from '@mui/material'
+import PageTitle from 'components/PageTitle/PageTitle'
 import TeamCardItem from 'components/TeamCardItem/TeamCardItem'
 import { teamArray } from 'utils/team'
 
@@ -6,14 +7,7 @@ type Props = {}
 const AboutUs = (props: Props) => {
     return (
         <Container>
-            <Typography
-                variant="h2"
-                component="h2"
-                align="center"
-                sx={{ marginTop: '50px', marginBottom: '30px' }}
-            >
-                Chi Siamo
-            </Typography>
+            <PageTitle title="Chi Siamo" />
             <Grid container spacing={3} justifyContent="center">
                 {teamArray.map((person) => {
                     return (
