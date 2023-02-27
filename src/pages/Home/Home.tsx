@@ -1,4 +1,3 @@
-import { Typography } from '@mui/material'
 import PageTitle from 'components/PageTitle/PageTitle'
 import PostsList from 'components/PostsList/PostsList'
 import Slider from 'components/Slider/Slider'
@@ -11,7 +10,7 @@ const Home = ({ posts }: Props) => {
     return (
         <div>
             <Slider />
-            <PageTitle title="Ultime notizie:" />
+            <PageTitle title="Le ultime notizie:" />
             <PostsList posts={posts} />
         </div>
     )
