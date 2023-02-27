@@ -3,23 +3,53 @@ import { StyledEngineProvider } from '@mui/material/styles'
 import Footer from 'container/Footer/Footer'
 import Header from 'container/Header/Header'
 import AboutUs from 'pages/AboutUs/AboutUs'
+import CartPage from 'pages/CartPage/CartPage'
+import Contacts from 'pages/Contacts/Contacts'
 import Home from 'pages/Home/Home'
 import NewsEvents from 'pages/NewsEvents/NewsEvents'
 import Shopping from 'pages/Shopping/Shopping'
 import SinglePost from 'pages/SinglePost/SinglePost'
+import { useState } from 'react'
+import { Route, Routes } from 'react-router-dom'
 import { postsArray, lastPostsArray } from 'utils/posts'
 
 type Props = {}
+export type ProductsInCart = {
+    [id: number]: number
+}
 const App = (props: Props) => {
+    const [productsInCart, setProductsInCart] = useState<ProductsInCart>({
+        1: 5,
+        2: 5,
+    })
+    const addProductToCart = (id: number, count: number) => {
+        setProductsInCart((prevState) => ({
+            ...prevState,
+            [id]: (prevState[id] || 0) + count,
+        }))
+    }
     return (
         <>
             <StyledEngineProvider injectFirst>
                 <CssBaseline />
-                <Header />
-                {/* <Home posts={lastPostsArray} /> */}
-                {/* <NewsEvents posts={postsArray} /> */}
-                {/* <AboutUs /> */}
-                <Shopping />
+                <Header productsInCart={productsInCart} />
+                <Routes>
+                    <Route path="/" element={<Home posts={lastPostsArray} />} />
+                    <Route path="aboutus" element={<AboutUs />} />
+                    <Route
+                        path="news"
+                        element={<NewsEvents posts={postsArray} />}
+                    />
+                    <Route path="contacts" element={<Contacts />} />
+                    <Route
+                        path="/shopping"
+                        element={
+                            <Shopping addProductToCart={addProductToCart} />
+                        }
+                    />
+                    <Route path="cart" element={<CartPage />} />
+                </Routes>
+
                 <Footer />
             </StyledEngineProvider>
         </>

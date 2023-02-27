@@ -1,0 +1,22 @@
+.product-card{
+    display: flex;
+    .card-image {
+        flex: 20%;
+        display: flex;
+        justify-content: center;
+        img{
+            height: 150px;
+            object-fit: contain;
+        }
+    }
+    .card-content{
+        flex: 80%;
+        &-title{
+            font-weight: bold;
+            font-size: 24px;
+        }
+        &-description{
+            font-style: italic;
+        }
+    }
+}

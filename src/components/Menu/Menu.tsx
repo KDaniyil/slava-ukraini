@@ -1,16 +1,34 @@
 import { Button } from '@mui/material'
+import CartHeader from 'components/CartHeader/CartHeader'
+import { ProductsInCart } from 'container/App/App'
+import { Link } from 'react-router-dom'
 import './Menu.scss'
-import Logo from 'components/Logo/Logo'
 
-type Props = {}
-const Menu = (props: Props) => {
+type Props = {
+    productsInCart: ProductsInCart
+}
+const Menu = ({ productsInCart }: Props) => {
     return (
         <>
-            <Button color="inherit">HOME</Button>
-            <Button color="inherit">CHI SIAMO</Button>
-            <Button color="inherit">EVENTI & NEWS</Button>
-            <Button color="inherit">CONTATTI</Button>
-            <Button color="inherit">SHOPPING</Button>
+            <Button color="inherit">
+                <Link to={'/'}>HOME</Link>
+            </Button>
+            <Button color="inherit">
+                <Link to={'aboutus'}>CHI SIAMO</Link>
+            </Button>
+            <Button color="inherit">
+                <Link to={'news'}>EVENTI & NEWS</Link>
+            </Button>
+            <Button color="inherit">
+                <Link to={'contacts'}>CONTATTI</Link>
+            </Button>
+            <Button color="inherit">
+                <Link to={'shopping'}>SHOPPING</Link>
+            </Button>
+            <Button color="inherit">
+                <Link to={'cart'}>CARELLO</Link>
+            </Button>
+            <CartHeader productsInCart={productsInCart} />
             <Button color="inherit" className="btn-dona">
                 DONA
             </Button>
