@@ -3,7 +3,7 @@ import { Slides } from 'utils/slides'
 type Props = {
     slide: Slides
 }
-function SliderItem({ slide }: Props) {
+const SliderItem = ({ slide }: Props) => {
     return (
         <div className="slide">
             <img src={slide.image} alt={slide.title} />

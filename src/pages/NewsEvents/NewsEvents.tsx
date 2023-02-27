@@ -5,7 +5,7 @@ import { Post } from 'utils/posts'
 type Props = {
     posts: Post[]
 }
-function NewsEvents({ posts }: Props) {
+const NewsEvents = ({ posts }: Props) => {
     return (
         <div>
             <PageTitle title="Eventi & News" />

@@ -12,7 +12,7 @@ type Props = {
     product: Product
     addProductToCart: (id: number, count: number) => void
 }
-function ProductsListItem({ product, addProductToCart }: Props) {
+const ProductsListItem = ({ product, addProductToCart }: Props) => {
     const [count, setCount] = useState<number>(1)
     const onIncrement = () => setCount((prevState) => prevState + 1)
     const onDecrement = () => setCount((prevState) => prevState - 1)

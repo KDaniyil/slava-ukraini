@@ -6,7 +6,7 @@ import './ProductsList.scss'
 type Props = {
     addProductToCart: (id: number, count: number) => void
 }
-function ProductsList({ addProductToCart }: Props) {
+const ProductsList = ({ addProductToCart }: Props) => {
     return (
         <>
             <Grid container spacing={3}>

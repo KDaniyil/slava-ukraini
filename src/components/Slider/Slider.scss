@@ -38,12 +38,14 @@
     border-radius:50%;
     width: 60px;
     height: 60px;
-    opacity: 0.4;
+    opacity: 0.2;
     color: whitesmoke;
+    transition: all .5s ease;
 
     &:hover{
         opacity: 1;
-        background: #333;
         border: 1px solid whitesmoke;
+        transform:scale(1.2);
+        transition: all .5s ease;
     }
   }

@@ -10,8 +10,10 @@ type Props = {
 const Menu = ({ productsInCart }: Props) => {
     return (
         <>
-            <Button color="inherit">
-                <Link to={'/'}>HOME</Link>
+            <Button color="primary">
+                <Link to={'/'} color="whitesmoke">
+                    HOME
+                </Link>
             </Button>
             <Button color="inherit">
                 <Link to={'aboutus'}>CHI SIAMO</Link>

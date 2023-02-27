@@ -5,7 +5,7 @@ import './TeamCardItem.scss'
 type Props = {
     person: Team
 }
-function TeamCardItem({ person }: Props) {
+const TeamCardItem = ({ person }: Props) => {
     return (
         <Card variant="outlined" className="team-card">
             <CardContent>

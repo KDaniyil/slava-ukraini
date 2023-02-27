@@ -47,7 +47,10 @@ const App = (props: Props) => {
                             <Shopping addProductToCart={addProductToCart} />
                         }
                     />
-                    <Route path="cart" element={<CartPage />} />
+                    <Route
+                        path="cart"
+                        element={<CartPage productsInCart={productsInCart} />}
+                    />
                 </Routes>
 
                 <Footer />

@@ -6,7 +6,7 @@ import PageTitle from 'components/PageTitle/PageTitle'
 type Props = {
     post: Post
 }
-function SinglePost({ post }: Props) {
+const SinglePost = ({ post }: Props) => {
     return (
         <Container className="single-post">
             <PageTitle title={post.title} />

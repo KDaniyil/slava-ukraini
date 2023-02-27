@@ -1,29 +1,17 @@
-import { Button } from '@mui/material'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
 import { ProductsInCart } from 'container/App/App'
-import { productsArray, getProductsObject, Product } from 'utils/products'
+import CartTotal from 'components/CartTotal/CartTotal'
+import CartProductList from 'components/CartProductList/CartProductList'
 
 type Props = {
     productsInCart: ProductsInCart
-    productsObject?: {
-        [id: number]: Product
-    }
 }
-function CartHeader({
-    productsInCart,
-    productsObject = getProductsObject(productsArray),
-}: Props) {
+const CartHeader = ({ productsInCart }: Props) => {
     return (
         <>
             <ShoppingCartOutlinedIcon fontSize="small" />
-            <div>
-                {Object.keys(productsInCart).map((productId) => (
-                    <div key={productId}>
-                        {productsInCart[parseInt(productId)]}:{' '}
-                        {productsObject[parseInt(productId)].title}
-                    </div>
-                ))}
-            </div>
+            <CartProductList productsInCart={productsInCart} />
+            <CartTotal productsInCart={productsInCart} />
         </>
     )
 }

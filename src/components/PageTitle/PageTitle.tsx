@@ -4,7 +4,7 @@ import './PageTitle.scss'
 type Props = {
     title: string
 }
-function PageTitle({ title }: Props) {
+const PageTitle = ({ title }: Props) => {
     return (
         <>
             <Typography
