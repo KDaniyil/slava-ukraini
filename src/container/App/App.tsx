@@ -12,6 +12,7 @@ import SinglePost from 'pages/SinglePost/SinglePost'
 import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { postsArray, lastPostsArray } from 'utils/posts'
+import { omit } from 'lodash'
 
 type Props = {}
 export type ProductsInCart = {
@@ -27,6 +28,9 @@ const App = (props: Props) => {
             ...prevState,
             [id]: (prevState[id] || 0) + count,
         }))
+    }
+    const removeProductFromCart = (id: number) => {
+        setProductsInCart((prevState) => omit(prevState, [id]))
     }
     return (
         <>
@@ -49,7 +53,12 @@ const App = (props: Props) => {
                     />
                     <Route
                         path="cart"
-                        element={<CartPage productsInCart={productsInCart} />}
+                        element={
+                            <CartPage
+                                productsInCart={productsInCart}
+                                removeProductFromCart={removeProductFromCart}
+                            />
+                        }
                     />
                 </Routes>
 

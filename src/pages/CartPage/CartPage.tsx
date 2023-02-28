@@ -7,8 +7,9 @@ import { ProductsInCart } from 'container/App/App'
 
 type Props = {
     productsInCart: ProductsInCart
+    removeProductFromCart: (id: number) => void
 }
-const CartPage = ({ productsInCart }: Props) => {
+const CartPage = ({ productsInCart, removeProductFromCart }: Props) => {
     return (
         <div>
             <PageTitle title="Carello" />
@@ -16,6 +17,7 @@ const CartPage = ({ productsInCart }: Props) => {
                 <CartProductList
                     productsInCart={productsInCart}
                     CartItem={CartProductListItemExtended}
+                    removeProductFromCart={removeProductFromCart}
                 />
             </Grid>
             <CartTotal productsInCart={productsInCart} />
