@@ -4,7 +4,7 @@ export type Post = {
     title: string
     text: string
     date: string
-    category: string
+    category?: string
 }
 export const postsArray: Post[] = [
 {

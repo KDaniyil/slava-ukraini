@@ -21,13 +21,15 @@ const CartProductList = ({
     return (
         <>
             {Object.keys(productsInCart).map((productId) => (
-                <CartItem
-                    key={productId}
-                    product={productsObject[parseInt(productId)]}
-                    productCout={productsInCart[parseInt(productId)]}
-                    removeProductFromCart={removeProductFromCart}
-                    changeProductQuantity={changeProductQuantity}
-                />
+                <>
+                    <CartItem
+                        key={productId}
+                        product={productsObject[parseInt(productId)]}
+                        productCount={productsInCart[parseInt(productId)]}
+                        removeProductFromCart={removeProductFromCart}
+                        changeProductQuantity={changeProductQuantity}
+                    />
+                </>
             ))}
         </>
     )

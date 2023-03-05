@@ -1,5 +1,5 @@
-export type Type = "Portachiavi" | "Borsa" | "Borsa per cosmetici"
-export type Model = "Papavero" | "Ornamento ucraino" | "Lovely" | "Basic" |"Tenderness" | "Original" | "Tablet" | "Coquette"
+type Type = "Portachiavi" | "Borsa" | "Borsa per cosmetici"
+type Model = "Papavero" | "Ornamento ucraino" | "Lovely" | "Basic" |"Tenderness" | "Original" | "Tablet" | "Coquette"
 
 export type Product = {
     id: number

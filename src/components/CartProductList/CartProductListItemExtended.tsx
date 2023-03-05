@@ -23,7 +23,7 @@ const CartProductListItemExtended = ({
                         <img src={product.image} alt={product.title} />
                     </div>
                     <div>{product.title}</div>
-                    <p>Prezzo: {product.price}</p>
+                    <p>Prezzo: {product.price} Euro</p>
                     <p>Quantità: {productCount}</p>
                     <Quantity
                         count={productCount}
