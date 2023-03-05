@@ -1,14 +1,23 @@
-button a{
-    text-decoration: none;
-    color:whitesmoke;
-}
 .btn-dona{
     margin-left: 50px;
+    background-color: rgb(241, 62, 62);
     transition: all .5s ease;
-    background-color:red;
+    opacity: 0.6;
+    a{
+        text-decoration: none;
+        color: #333;
+    }
     &:hover{
-        background-color: rgb(241, 62, 62);
+        background-color:red;
         transform: scale(1.5);
         transition: all .5s ease;
     }
+}
+.menu-item-active{
+    text-decoration: none;
+    color: yellowgreen;
+}
+.menu-item{
+    text-decoration: none;
+    color:whitesmoke;
 }

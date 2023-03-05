@@ -9,7 +9,9 @@ const NewsEvents = ({ posts }: Props) => {
     return (
         <div>
             <PageTitle title="Eventi & News" />
-            <PostsList posts={posts} />
+            <PostsList
+                posts={posts.filter((post) => post.category === 'mitings')}
+            />
         </div>
     )
 }

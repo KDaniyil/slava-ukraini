@@ -13,6 +13,8 @@ import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { postsArray, lastPostsArray } from 'utils/posts'
 import { omit } from 'lodash'
+import './App.scss'
+import Donation from 'pages/Donation/Donation'
 
 type Props = {}
 export type ProductsInCart = {
@@ -44,21 +46,24 @@ const App = (props: Props) => {
                 <CssBaseline />
                 <Header productsInCart={productsInCart} />
                 <Routes>
-                    <Route path="/" element={<Home posts={lastPostsArray} />} />
-                    <Route path="aboutus" element={<AboutUs />} />
                     <Route
-                        path="news"
+                        path="/"
+                        element={<Home posts={postsArray.slice(-3)} />}
+                    />
+                    <Route path="/about-us" element={<AboutUs />} />
+                    <Route
+                        path="/news"
                         element={<NewsEvents posts={postsArray} />}
                     />
-                    <Route path="contacts" element={<Contacts />} />
+                    <Route path="/contacts" element={<Contacts />} />
                     <Route
-                        path="/shopping"
+                        path="/shop"
                         element={
                             <Shopping addProductToCart={addProductToCart} />
                         }
                     />
                     <Route
-                        path="cart"
+                        path="/cart"
                         element={
                             <CartPage
                                 productsInCart={productsInCart}
@@ -67,6 +72,7 @@ const App = (props: Props) => {
                             />
                         }
                     />
+                    <Route path="/donation" element={<Donation />} />
                 </Routes>
 
                 <Footer />
