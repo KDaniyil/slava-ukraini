@@ -1,8 +1,7 @@
 import { Button } from '@mui/material'
 import CartHeader from 'components/CartHeader/CartHeader'
-import MenuIcons from 'components/MenuIcons/MenuIcons'
 import { ProductsInCart } from 'container/App/App'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './Menu.scss'
 import MenuItem from './MenuItem'
 

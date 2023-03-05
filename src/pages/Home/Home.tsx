@@ -1,3 +1,4 @@
+import Comments from 'components/Comments/Comments'
 import PageTitle from 'components/PageTitle/PageTitle'
 import PostsList from 'components/PostsList/PostsList'
 import Slider from 'components/Slider/Slider'
@@ -12,6 +13,7 @@ const Home = ({ posts }: Props) => {
             <Slider />
             <PageTitle title="Le ultime notizie:" />
             <PostsList posts={posts} />
+            <Comments />
         </div>
     )
 }
