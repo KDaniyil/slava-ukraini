@@ -11,7 +11,10 @@ const PostsListItem = ({ post }: Props) => {
                 <div className="post-image">
                     <img src={post.image} alt={post.title} />
                 </div>
-                <div className="post-date">{post.date}</div>
+                <div className="post-date">
+                    <div>{post.date}</div>
+                    <div>Categoria: {post.category}</div>
+                </div>
                 <div className="post-title">{post.title}</div>
                 <div className="post-text">{post.text}</div>
             </CardContent>
