@@ -1,3 +1,4 @@
+import axios from 'axios'
 import PageTitle from 'components/PageTitle/PageTitle'
 import { useState } from 'react'
 
@@ -39,7 +40,7 @@ const CheckoutPage = (props: Props) => {
     const renderMessage = () => {
         return (
             <div>
-                <div>Gentile, {orderData.name} thnks for your order!</div>
+                <div>Gentile, {orderData.name} grazie per il tuo ordine!</div>
                 <div>Indirizzo: {orderData.address}</div>
             </div>
         )
@@ -57,6 +58,22 @@ const CheckoutPage = (props: Props) => {
 
     const orderSend = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
+        axios
+            .post(
+                'https://my-json-server.typicode.com/kznkv-skillup/server/orders',
+                {
+                    name: orderData.name,
+                    address: orderData.address,
+                }
+            )
+            .then((res) => res.data)
+            .then(({ name, address }) => {
+                setOrderData({
+                    name,
+                    address,
+                })
+                setOrderSend(true)
+            })
     }
     return (
         <>
