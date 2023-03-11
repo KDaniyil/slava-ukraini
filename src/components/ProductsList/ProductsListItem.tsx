@@ -10,7 +10,6 @@ import { addProductToCart } from 'redux/cartReducer'
 
 type Props = {
     product: Product
-    addProductToCart?: (id: number, count: number) => void
 }
 const ProductsListItem = ({ product }: Props) => {
     const [count, setCount] = useState<number>(1)

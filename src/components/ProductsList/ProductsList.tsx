@@ -3,10 +3,8 @@ import { productsArray } from 'utils/products'
 import ProductsListItem from './ProductsListItem'
 import './ProductsList.scss'
 
-type Props = {
-    addProductToCart: (id: number, count: number) => void
-}
-const ProductsList = ({ addProductToCart }: Props) => {
+type Props = {}
+const ProductsList = (props: Props) => {
     return (
         <>
             <Grid container spacing={3}>
@@ -14,10 +12,7 @@ const ProductsList = ({ addProductToCart }: Props) => {
                     return (
                         <>
                             <Grid item xs={12}>
-                                <ProductsListItem
-                                    product={product}
-                                    addProductToCart={addProductToCart}
-                                />
+                                <ProductsListItem product={product} />
                             </Grid>
                         </>
                     )

@@ -9,37 +9,15 @@ import Home from 'pages/Home/Home'
 import NewsEvents from 'pages/NewsEvents/NewsEvents'
 import Shopping from 'pages/Shopping/Shopping'
 import SinglePost from 'pages/SinglePost/SinglePost'
-import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { postsArray } from 'utils/posts'
-import { omit } from 'lodash'
 import './App.scss'
 import Donation from 'pages/Donation/Donation'
+import CheckoutPage from 'pages/Checkout/CheckoutPage'
 
 type Props = {}
-export type ProductsInCart = {
-    [id: number]: number
-}
+
 const App = (props: Props) => {
-    const [productsInCart, setProductsInCart] = useState<ProductsInCart>({
-        1: 5,
-        2: 5,
-    })
-    const addProductToCart = (id: number, count: number) => {
-        setProductsInCart((prevState) => ({
-            ...prevState,
-            [id]: (prevState[id] || 0) + count,
-        }))
-    }
-    const removeProductFromCart = (id: number) => {
-        setProductsInCart((prevState) => omit(prevState, [id]))
-    }
-    const changeProductQuantity = (id: number, count: number) => {
-        setProductsInCart((prevState) => ({
-            ...prevState,
-            [id]: count,
-        }))
-    }
     return (
         <>
             <StyledEngineProvider injectFirst>
@@ -50,30 +28,32 @@ const App = (props: Props) => {
                         path="/"
                         element={<Home posts={postsArray.slice(-3)} />}
                     />
-                    <Route path="/about-us" element={<AboutUs />} />
                     <Route
-                        path="/news"
-                        element={<NewsEvents posts={postsArray} />}
-                    />
-                    <Route path="/contacts" element={<Contacts />} />
-                    <Route
-                        path="/shop"
+                        path="post:id"
                         element={
-                            <Shopping addProductToCart={addProductToCart} />
-                        }
-                    />
-                    <Route
-                        path="/cart"
-                        element={
-                            <CartPage
-                                removeProductFromCart={removeProductFromCart}
-                                changeProductQuantity={changeProductQuantity}
+                            <SinglePost
+                                post={{
+                                    id: 0,
+                                    image: '',
+                                    title: '',
+                                    text: '',
+                                    date: '',
+                                    category: undefined,
+                                }}
                             />
                         }
                     />
-                    <Route path="/donation" element={<Donation />} />
+                    <Route path="about-us" element={<AboutUs />} />
+                    <Route
+                        path="news"
+                        element={<NewsEvents posts={postsArray} />}
+                    />
+                    <Route path="contacts" element={<Contacts />} />
+                    <Route path="shop" element={<Shopping />} />
+                    <Route path="cart" element={<CartPage />} />
+                    <Route path="checkout" element={<CheckoutPage />} />
+                    <Route path="donation" element={<Donation />} />
                 </Routes>
-
                 <Footer />
             </StyledEngineProvider>
         </>
