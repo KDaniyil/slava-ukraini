@@ -1,12 +1,10 @@
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
-import { ProductsInCart } from 'container/App/App'
 import CartTotal from 'components/CartTotal/CartTotal'
 import CartProductList from 'components/CartProductList/CartProductList'
+import { useAppSelector } from 'redux/hooks'
 
-type Props = {
-    productsInCart: ProductsInCart
-}
-const CartHeader = ({ productsInCart }: Props) => {
+const CartHeader = () => {
+    const productsInCart = useAppSelector((state) => state.productsInCart)
     return (
         <>
             <ShoppingCartOutlinedIcon fontSize="small" />

@@ -44,7 +44,7 @@ const App = (props: Props) => {
         <>
             <StyledEngineProvider injectFirst>
                 <CssBaseline />
-                <Header productsInCart={productsInCart} />
+                <Header />
                 <Routes>
                     <Route
                         path="/"
@@ -66,7 +66,6 @@ const App = (props: Props) => {
                         path="/cart"
                         element={
                             <CartPage
-                                productsInCart={productsInCart}
                                 removeProductFromCart={removeProductFromCart}
                                 changeProductQuantity={changeProductQuantity}
                             />

@@ -1,14 +1,10 @@
 import { Button } from '@mui/material'
 import CartHeader from 'components/CartHeader/CartHeader'
-import { ProductsInCart } from 'container/App/App'
 import { NavLink } from 'react-router-dom'
 import './Menu.scss'
 import MenuItem from './MenuItem'
 
-type Props = {
-    productsInCart: ProductsInCart
-}
-const Menu = ({ productsInCart }: Props) => {
+const Menu = () => {
     return (
         <>
             <MenuItem to="/">HOME</MenuItem>
@@ -17,7 +13,7 @@ const Menu = ({ productsInCart }: Props) => {
             <MenuItem to="/contacts">CONTATTI</MenuItem>
             <MenuItem to="/shop">SHOP</MenuItem>
             <MenuItem to="/cart">CARELLO</MenuItem>
-            <CartHeader productsInCart={productsInCart} />
+            <CartHeader />
             <Button className="btn-dona">
                 <NavLink to="/donation">DONA</NavLink>
             </Button>

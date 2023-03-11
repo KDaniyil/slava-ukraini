@@ -1,9 +1,10 @@
-import { ProductsInCart } from 'container/App/App'
 import { Product, getProductsObject, productsArray } from 'utils/products'
 import CartProductListItem from './CartProductListItem'
 
 type Props = {
-    productsInCart: ProductsInCart
+    productsInCart: {
+        [id: number]: number
+    }
     productsObject?: {
         [id: number]: Product
     }

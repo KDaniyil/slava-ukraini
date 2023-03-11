@@ -6,12 +6,13 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
 import FavoriteIcon from '@mui/icons-material/Favorite'
 import { useAppDispatch, useAppSelector } from 'redux/hooks'
 import { addLike, removeLike } from 'redux/likeReducer'
+import { addProductToCart } from 'redux/cartReducer'
 
 type Props = {
     product: Product
-    addProductToCart: (id: number, count: number) => void
+    addProductToCart?: (id: number, count: number) => void
 }
-const ProductsListItem = ({ product, addProductToCart }: Props) => {
+const ProductsListItem = ({ product }: Props) => {
     const [count, setCount] = useState<number>(1)
     const onIncrement = () => setCount((prevState) => prevState + 1)
     const onDecrement = () => setCount((prevState) => prevState - 1)
@@ -64,7 +65,11 @@ const ProductsListItem = ({ product, addProductToCart }: Props) => {
                 />
                 <Button
                     variant="outlined"
-                    onClick={() => addProductToCart(product.id, count)}
+                    onClick={() =>
+                        dispatch(
+                            addProductToCart({ id: product.id, count: count })
+                        )
+                    }
                 >
                     Add
                 </Button>
