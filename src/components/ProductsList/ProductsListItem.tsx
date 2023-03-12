@@ -7,6 +7,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite'
 import { useAppDispatch, useAppSelector } from 'redux/hooks'
 import { addLike, removeLike } from 'redux/likeReducer'
 import { addProductToCart } from 'redux/cartReducer'
+import { Link } from 'react-router-dom'
 
 type Props = {
     product: Product
@@ -37,7 +38,9 @@ const ProductsListItem = ({ product }: Props) => {
                 </div>
                 <div className="card-content">
                     <div className="card-content-title">
-                        Titolo: {product.title}
+                        <Link to={`/products/${product.id}`}>
+                            Titolo: {product.title}
+                        </Link>
                     </div>
                     <div className="card-content-description">
                         Descrizione: {product.description}

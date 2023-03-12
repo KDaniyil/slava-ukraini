@@ -21,7 +21,7 @@ const PostsListItem = ({ post }: Props) => {
             </CardContent>
             <CardActions>
                 <Button className="post-button" size="small">
-                    <Link to={'/post'}>Leggi</Link>
+                    <Link to={`/posts/${post.id}`}>Leggi</Link>
                 </Button>
             </CardActions>
         </Card>

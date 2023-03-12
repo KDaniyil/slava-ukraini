@@ -41,7 +41,10 @@ const CheckoutPage = (props: Props) => {
         return (
             <div>
                 <div>Gentile, {orderData.name} grazie per il tuo ordine!</div>
-                <div>Indirizzo: {orderData.address}</div>
+                <div>
+                    Materiale ordinato sarà inviato al seguente indirizzo:{' '}
+                    {orderData.address}
+                </div>
             </div>
         )
     }

@@ -14,6 +14,7 @@ import { postsArray } from 'utils/posts'
 import './App.scss'
 import Donation from 'pages/Donation/Donation'
 import CheckoutPage from 'pages/Checkout/CheckoutPage'
+import ProductPage from 'pages/Product/ProductPage'
 
 type Props = {}
 
@@ -28,21 +29,7 @@ const App = (props: Props) => {
                         path="/"
                         element={<Home posts={postsArray.slice(-3)} />}
                     />
-                    <Route
-                        path="post:id"
-                        element={
-                            <SinglePost
-                                post={{
-                                    id: 0,
-                                    image: '',
-                                    title: '',
-                                    text: '',
-                                    date: '',
-                                    category: undefined,
-                                }}
-                            />
-                        }
-                    />
+                    <Route path="posts/:id" element={<SinglePost />} />
                     <Route path="about-us" element={<AboutUs />} />
                     <Route
                         path="news"
@@ -50,6 +37,7 @@ const App = (props: Props) => {
                     />
                     <Route path="contacts" element={<Contacts />} />
                     <Route path="shop" element={<Shopping />} />
+                    <Route path="products/:id" element={<ProductPage />} />
                     <Route path="cart" element={<CartPage />} />
                     <Route path="checkout" element={<CheckoutPage />} />
                     <Route path="donation" element={<Donation />} />
