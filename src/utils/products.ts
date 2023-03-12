@@ -1,6 +1,3 @@
-type Type = "Portachiavi" | "Borsa" | "Borsa per cosmetici"
-type Model = "Papavero" | "Ornamento ucraino" | "Lovely" | "Basic" |"Tenderness" | "Original" | "Tablet" | "Coquette"
-
 export type Product = {
     id: number
     image: string
@@ -8,8 +5,8 @@ export type Product = {
     description: string
     price: number
     color: string
-    type: Type
-    model: Model
+    type: string
+    model: string
 }
 
 export const productsArray: Product[] = [
