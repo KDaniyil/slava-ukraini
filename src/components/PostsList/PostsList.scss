@@ -3,14 +3,18 @@
     height: 200px;
 }
 .post-button{
-    color: whitesmoke;
     background: #333;
     opacity: 0.8;
     transition: all 0.5s ease;
+    a{
+        color: whitesmoke;
+        text-decoration: none;
+    }
     &:hover{
         color: whitesmoke;
         background: #333;
         opacity: 1;
+        text-decoration:underline;
         transform: scale(1.2);
         transition: all 0.5s ease;
     }

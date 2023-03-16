@@ -10,30 +10,30 @@ import NewsEvents from 'pages/NewsEvents/NewsEvents'
 import Shopping from 'pages/Shopping/Shopping'
 import SinglePost from 'pages/SinglePost/SinglePost'
 import { Route, Routes } from 'react-router-dom'
-import { postsArray } from 'utils/posts'
 import './App.scss'
 import Donation from 'pages/Donation/Donation'
 import CheckoutPage from 'pages/Checkout/CheckoutPage'
 import ProductPage from 'pages/Product/ProductPage'
+import { ClassNames } from '@emotion/react'
 
 type Props = {}
 
 const App = (props: Props) => {
     return (
-        <>
+        <div className='app'>
             <StyledEngineProvider injectFirst>
                 <CssBaseline />
                 <Header />
                 <Routes>
                     <Route
                         path="/"
-                        element={<Home posts={postsArray.slice(-3)} />}
+                        element={<Home />}
                     />
                     <Route path="posts/:id" element={<SinglePost />} />
                     <Route path="about-us" element={<AboutUs />} />
                     <Route
                         path="news"
-                        element={<NewsEvents posts={postsArray} />}
+                        element={<NewsEvents />}
                     />
                     <Route path="contacts" element={<Contacts />} />
                     <Route path="shop" element={<Shopping />} />
@@ -44,7 +44,7 @@ const App = (props: Props) => {
                 </Routes>
                 <Footer />
             </StyledEngineProvider>
-        </>
+        </div>
     )
 }
 export default App
