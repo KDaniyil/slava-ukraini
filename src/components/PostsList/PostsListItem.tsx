@@ -1,5 +1,5 @@
-import { Button, Card, CardActions, CardContent } from '@mui/material'
-import { Link } from 'react-router-dom'
+import {Card, CardActions, CardContent } from '@mui/material'
+import LinkButton from 'components/LinkButton/LinkButton'
 import { Post } from 'utils/posts'
 
 type Props = {
@@ -14,15 +14,15 @@ const PostsListItem = ({ post }: Props) => {
                 </div>
                 <div className="post-date">
                     <div>{post.date}</div>
-                    <div>Categoria: {post.category}</div>
+                    <LinkButton to={`/category/${post.category}`}>{post.category}</LinkButton>
                 </div>
                 <div className="post-title">{post.title}</div>
                 <div className="post-text">{post.text}</div>
             </CardContent>
             <CardActions>
-                <Button className="post-button" size="small">
-                    <Link to={`/posts/${post.id}`}>Leggi</Link>
-                </Button>
+                <LinkButton to={`/posts/${post.id}`}>
+                    Leggi
+                </LinkButton>
             </CardActions>
         </Card>
     )

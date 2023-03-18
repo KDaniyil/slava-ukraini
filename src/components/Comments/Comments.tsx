@@ -7,12 +7,15 @@ import {
     Typography,
 } from '@mui/material'
 import { useState } from 'react'
-import { arrComments, Comment } from 'utils/comments'
 
 type Props = {}
+export type Comment = {
+    name: string
+    text: string
+}
 
 const Comments = (props: Props) => {
-    const [comments, setComments] = useState<Comment[]>(arrComments)
+    const [comments, setComments] = useState<Comment[]>([])
     const [newComment, setNewComment] = useState<Comment>({
         name: '',
         text: '',
@@ -46,7 +49,7 @@ const Comments = (props: Props) => {
     return (
         <>
             <Typography variant="h4" component="h2">
-                Comments
+                Commenti
             </Typography>
             <div>
                 {comments.map((comment, index) => (
@@ -59,10 +62,12 @@ const Comments = (props: Props) => {
                 ))}
             </div>
             <form onSubmit={onSend}>
-                <h3>Please leave your comment:</h3>
+                <Typography variant="h5" component="h5">
+                    Lascia il tuo commento:
+                </Typography>
                 <div>
                     <TextField
-                        label="Name"
+                        label="Nome"
                         value={newComment.name}
                         onChange={handleName}
                     />
@@ -76,7 +81,7 @@ const Comments = (props: Props) => {
                         />
                     </div>
                     <Button variant="outlined" type="submit">
-                        Send
+                        Invia
                     </Button>
                 </div>
             </form>
