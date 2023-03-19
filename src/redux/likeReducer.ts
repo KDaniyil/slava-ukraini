@@ -4,10 +4,8 @@ type likeType = {
     [id:number]: boolean
 }
 
-export const initialState: likeType = {
-    1:true,
-    2:true,
-}
+export const initialState: likeType = {}
+
 export const likeSlice = createSlice({
     name:"like",
     initialState,

@@ -2,8 +2,8 @@ import { Container, Grid } from '@mui/material'
 import CartProductList from 'components/CartProductList/CartProductList'
 import CartProductListItemExtended from 'components/CartProductList/CartProductListItemExtended'
 import CartTotal from 'components/CartTotal/CartTotal'
+import LinkButton from 'components/LinkButton/LinkButton'
 import PageTitle from 'components/PageTitle/PageTitle'
-import { Link } from 'react-router-dom'
 import { useAppSelector } from 'redux/hooks'
 
 const CartPage = () => {
@@ -18,7 +18,7 @@ const CartPage = () => {
                 />
             </Grid>
             <CartTotal productsInCart={productsInCart} />
-            <Link to={'/checkout'}>Procedi al Checkout</Link>
+            <LinkButton to={'/checkout'}>Procedi al Checkout</LinkButton>
         </Container>
     )
 }

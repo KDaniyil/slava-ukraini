@@ -14,7 +14,7 @@ const CartTotal = ({
 }: Props) => {
     return (
         <div>
-            Total:
+            Totale:
             {Object.keys(productsInCart).reduce(
                 (total, productId) =>
                     total +
@@ -22,7 +22,7 @@ const CartTotal = ({
                         productsInCart[parseInt(productId)],
                 0
             )}{' '}
-            $
+             €
         </div>
     )
 }

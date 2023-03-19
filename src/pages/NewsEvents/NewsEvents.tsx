@@ -9,7 +9,7 @@ const NewsEvents = (props: Props) => {
         <div>
             <PageTitle title="Eventi & News" />
             <PostsList
-                posts={postsArray.filter((post) => post.category === 'mitings')}
+                posts={postsArray}
             />
         </div>
     )

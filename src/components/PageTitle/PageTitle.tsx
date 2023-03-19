@@ -11,7 +11,8 @@ const PageTitle = ({ title }: Props) => {
                 variant="h2"
                 component="h2"
                 align="center"
-                className="page-title"
+                textTransform="uppercase"
+                className='page-title'
             >
                 {title}
             </Typography>

@@ -14,7 +14,7 @@ import './App.scss'
 import Donation from 'pages/Donation/Donation'
 import CheckoutPage from 'pages/Checkout/CheckoutPage'
 import ProductPage from 'pages/Product/ProductPage'
-import { ClassNames } from '@emotion/react'
+import CategoryPage from 'pages/CategoryPage/CategoryPage'
 
 type Props = {}
 
@@ -34,6 +34,10 @@ const App = (props: Props) => {
                     <Route
                         path="news"
                         element={<NewsEvents />}
+                    />
+                    <Route
+                        path="category/:category"
+                        element={<CategoryPage />}
                     />
                     <Route path="contacts" element={<Contacts />} />
                     <Route path="shop" element={<Shopping />} />
