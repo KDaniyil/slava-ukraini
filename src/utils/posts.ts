@@ -5,7 +5,6 @@ export type Post = {
     text: string
     date: string
     category: string
-    fullText?: string
 }
 export const postsArray: Post[] = [
 {
@@ -14,7 +13,7 @@ export const postsArray: Post[] = [
     title: "Emergenza Ucraina",
     text: "Cosa stiamo facendo e cosa possiamo fare ?",
     date: "23.02.2023",
-    category: "mitings",
+    category: "testimonianze",
 },
 {
     id: 2,
@@ -22,7 +21,7 @@ export const postsArray: Post[] = [
     title: "Emergenza Ucraina",
     text: "Cosa stiamo facendo e cosa possiamo fare ?",
     date: "23.02.2023",
-    category: "collection",
+    category: "raccolta",
 },
 {
     id: 3,
@@ -30,7 +29,7 @@ export const postsArray: Post[] = [
     title: "Emergenza Ucraina",
     text: "Cosa stiamo facendo e cosa possiamo fare ?",
     date: "23.02.2023",
-    category: "arrivals",
+    category: "raccolta",
 },
 {
     id: 4,
@@ -38,7 +37,7 @@ export const postsArray: Post[] = [
     title: "Emergenza Ucraina",
     text: "Cosa stiamo facendo e cosa possiamo fare ?",
     date: "23.02.2023",
-    category: "mitings"
+    category: "testimonianze"
 },
 {
     id: 5,
@@ -46,7 +45,7 @@ export const postsArray: Post[] = [
     title: "Emergenza Ucraina",
     text: "Cosa stiamo facendo e cosa possiamo fare ?",
     date: "23.02.2023",
-    category: "collection",
+    category: "news",
 },
 {
     id: 6,
@@ -54,7 +53,7 @@ export const postsArray: Post[] = [
     title: "Emergenza Ucraina",
     text: "Cosa stiamo facendo e cosa possiamo fare ?",
     date: "23.02.2023",
-    category: "arrivals",
+    category: "testimonianze",
 },
 ]
 

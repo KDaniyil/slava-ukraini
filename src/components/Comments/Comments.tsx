@@ -48,9 +48,6 @@ const Comments = (props: Props) => {
     }
     return (
         <>
-            <Typography variant="h4" component="h2">
-                Commenti
-            </Typography>
             <div>
                 {comments.map((comment, index) => (
                     <Card variant="outlined" key={index}>
@@ -63,22 +60,23 @@ const Comments = (props: Props) => {
             </div>
             <form onSubmit={onSend}>
                 <Typography variant="h5" component="h5">
-                    Lascia il tuo commento:
+                    Lascia un commento:
                 </Typography>
                 <div>
+                    <TextareaAutosize
+                            minRows={5}
+                            placeholder="Scrivi qui"
+                            value={newComment.text}
+                            onChange={handleText}
+                    />
+                    <br />
                     <TextField
                         label="Nome"
                         value={newComment.name}
                         onChange={handleName}
+                        placeholder="Tuo Nome"
                     />
-                    <br />
                     <div>
-                        <TextareaAutosize
-                            minRows={5}
-                            placeholder="text"
-                            value={newComment.text}
-                            onChange={handleText}
-                        />
                     </div>
                     <Button variant="outlined" type="submit">
                         Invia

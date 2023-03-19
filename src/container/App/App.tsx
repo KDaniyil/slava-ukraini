@@ -32,7 +32,7 @@ const App = (props: Props) => {
                     <Route path="posts/:id" element={<SinglePost />} />
                     <Route path="about-us" element={<AboutUs />} />
                     <Route
-                        path="news"
+                        path="posts"
                         element={<NewsEvents />}
                     />
                     <Route

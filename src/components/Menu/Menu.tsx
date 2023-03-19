@@ -1,6 +1,7 @@
 import { Button } from '@mui/material'
 import CartHeader from 'components/CartHeader/CartHeader'
 import { NavLink } from 'react-router-dom'
+import DropdownMenu from './DropdownMenu'
 import './Menu.scss'
 import MenuItem from './MenuItem'
 
@@ -9,7 +10,7 @@ const Menu = () => {
         <>
             <MenuItem to="/">HOME</MenuItem>
             <MenuItem to="/about-us">CHI SIAMO</MenuItem>
-            <MenuItem to="/news">EVENTI & NEWS</MenuItem>
+            <DropdownMenu/>
             <MenuItem to="/contacts">CONTATTI</MenuItem>
             <MenuItem to="/shop">SHOP</MenuItem>
             <MenuItem to="/cart">CARELLO</MenuItem>

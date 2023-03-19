@@ -9,7 +9,7 @@ const AboutUs = (props: Props) => {
     return (
         <Container>
             <PageTitle title="Chi Siamo" />
-            <Typography variant='h4' component="h4" className='about-us-text'>Gloria all'Ucraina è un'organizzazione di volontariato creata in Italia dagli ucraini nel 2022, un momento difficile per l'Ucraina, quando il nostro Paese ha più che mai bisogno di aiuto.</Typography>
+            <Typography variant='h4' component="h4" className='about-us-text'> Slava Ukraini OdV (Gloria all'Ucraina) è un'organizzazione di volontariato creata in Italia dagli ucraini nel 2022, un momento difficile per l'Ucraina, quando il nostro Paese ha più che mai bisogno di aiuto.</Typography>
             <Typography variant='h3' component="h3" className='about-us-subtitle'>Il nostro Team</Typography>
             <Grid container spacing={3} justifyContent="center">
                 {teamArray.map((person) => {
