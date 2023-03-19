@@ -1,0 +1,14 @@
+.contacts-list{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    li, a{
+        text-decoration: none;
+        font-style: italic;
+        font-size: 20px;
+        margin-top: 30px;
+        color: #333;
+    }
+}

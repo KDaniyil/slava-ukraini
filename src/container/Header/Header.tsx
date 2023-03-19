@@ -5,7 +5,7 @@ import Logo from 'components/Logo/Logo'
 
 const Header = () => {
     return (
-        <AppBar position="static" className="app-bar">
+        <AppBar position="sticky" className="app-bar">
             <Container>
                 <Toolbar>
                     <Logo />

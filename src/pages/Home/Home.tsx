@@ -1,5 +1,6 @@
+import { Typography } from '@mui/material'
 import { Container } from '@mui/system'
-import Map from 'components/Map/Map'
+import ContactsDetails from 'components/ContactsDetails/ContactsDetails'
 import PageTitle from 'components/PageTitle/PageTitle'
 import PostsList from 'components/PostsList/PostsList'
 import Slider from 'components/Slider/Slider'
@@ -14,7 +15,8 @@ const Home = (props: Props) => {
             <Container>
                 <PageTitle title="Le ultime notizie:" />
                 <PostsList posts={postsArray.slice(-3)} />
-                <Map />
+                <Typography variant="h4" component="h4">Noi siamo qui:</Typography>
+                <ContactsDetails />
             </Container>
             
         </div>
