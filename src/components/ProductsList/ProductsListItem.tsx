@@ -21,10 +21,11 @@ const ProductsListItem = ({ product }: Props) => {
     )
     const dispatch = useAppDispatch()
     return (
-        <Card>
+        <Card className="card">
             <CardContent className="product-card">
                 <Button
                     variant="outlined"
+                    className='like-btn'
                     onClick={() =>
                         isLiked
                             ? dispatch(removeLike(product.id))
@@ -55,7 +56,7 @@ const ProductsListItem = ({ product }: Props) => {
                         Colore: {product.color}
                     </div>
                     <div className="card-content-price">
-                        Prezzo: {product.price} euro
+                        Prezzo: <span>€ {product.price}</span>
                     </div>
                 </div>
             </CardContent>
@@ -66,6 +67,7 @@ const ProductsListItem = ({ product }: Props) => {
                     onIncrement={onIncrement}
                 />
                 <Button
+                    className="add-btn"
                     variant="outlined"
                     onClick={() =>
                         dispatch(
@@ -73,7 +75,7 @@ const ProductsListItem = ({ product }: Props) => {
                         )
                     }
                 >
-                    Add
+                    Aggiungi al carrello
                 </Button>
             </CardActions>
         </Card>

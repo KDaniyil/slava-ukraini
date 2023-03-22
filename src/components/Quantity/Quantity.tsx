@@ -1,4 +1,5 @@
 import { Button, TextField } from '@mui/material'
+import "./Quantity.scss"
 
 type Props = {
     count: number
@@ -8,15 +9,16 @@ type Props = {
 }
 const Quantity = ({ count, onDecrement, onIncrement, minCount = 1 }: Props) => {
     return (
-        <div>
-            <Button
+        <div className='quantity'>
+            <TextField size="small" value={count} className="count-input" />
+           <div className='count-btns'>
+           <Button
                 variant="outlined"
                 onClick={() => onDecrement()}
                 disabled={count <= minCount}
             >
                 -
             </Button>
-            <TextField size="small" value={count} />
             <Button
                 variant="outlined"
                 onClick={() => onIncrement()}
@@ -24,6 +26,7 @@ const Quantity = ({ count, onDecrement, onIncrement, minCount = 1 }: Props) => {
             >
                 +
             </Button>
+           </div>
         </div>
     )
 }

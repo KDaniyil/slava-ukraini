@@ -4,6 +4,7 @@ import DeleteIcon from '@mui/icons-material/Delete'
 import Quantity from 'components/Quantity/Quantity'
 import { useAppDispatch } from 'redux/hooks'
 import { changeProductQuantity, removeProductFromCart } from 'redux/cartReducer'
+import "./CartProductListItemExtended.scss"
 
 type Props = {
     product: Product
@@ -12,7 +13,7 @@ type Props = {
 const CartProductListItemExtended = ({ product, productCount }: Props) => {
     const dispatch = useAppDispatch()
     return (
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12} sm={6} md={4}>
             <Card>
                 <CardContent>
                     <div className="product-image">
@@ -20,7 +21,6 @@ const CartProductListItemExtended = ({ product, productCount }: Props) => {
                     </div>
                     <div>{product.title}</div>
                     <p>Prezzo: {product.price} Euro</p>
-                    <p>Quantità: {productCount}</p>
                     <Quantity
                         count={productCount}
                         onDecrement={() =>

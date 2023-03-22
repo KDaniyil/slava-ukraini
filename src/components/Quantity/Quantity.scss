@@ -1,0 +1,16 @@
+.quantity{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.count-btns{
+    display: flex;
+    button{
+        width: 50%;
+    }
+}
+.count-input {
+    input{
+        text-align: center;
+    }
+}
