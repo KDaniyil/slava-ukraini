@@ -7,7 +7,6 @@ import FavoriteIcon from '@mui/icons-material/Favorite'
 import { useAppDispatch, useAppSelector } from 'redux/hooks'
 import { addLike, removeLike } from 'redux/likeReducer'
 import { addProductToCart } from 'redux/cartReducer'
-import { Link } from 'react-router-dom'
 
 type Props = {
     product: Product
@@ -25,7 +24,7 @@ const ProductsListItem = ({ product }: Props) => {
             <CardContent className="product-card">
                 <Button
                     variant="outlined"
-                    className='like-btn'
+                    className="like-btn"
                     onClick={() =>
                         isLiked
                             ? dispatch(removeLike(product.id))
@@ -39,9 +38,7 @@ const ProductsListItem = ({ product }: Props) => {
                 </div>
                 <div className="card-content">
                     <div className="card-content-title">
-                        <Link to={`/products/${product.id}`}>
-                            Titolo: {product.title}
-                        </Link>
+                        Titolo: {product.title}
                     </div>
                     <div className="card-content-description">
                         Descrizione: {product.description}

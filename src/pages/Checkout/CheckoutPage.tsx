@@ -1,6 +1,7 @@
 import axios from 'axios'
 import PageTitle from 'components/PageTitle/PageTitle'
 import { useState } from 'react'
+import "./CheckoutPage.scss"
 
 type Props = {}
 type Order = {
@@ -16,16 +17,17 @@ const CheckoutPage = (props: Props) => {
 
     const renderForm = () => {
         return (
-            <form onSubmit={orderSend}>
-                <div>
+            <form className='checkout-form' onSubmit={orderSend}>
+                <div className="checkout-input">
                     <input
                         type="text"
                         placeholder="Tuo nome"
                         value={orderData.name}
                         onChange={handleName}
+                        
                     />
                 </div>
-                <div>
+                <div className="checkout-input">
                     <input
                         type="text"
                         placeholder="Tuo indirizzo"
@@ -33,7 +35,7 @@ const CheckoutPage = (props: Props) => {
                         onChange={handleAddress}
                     />
                 </div>
-                <button type="submit">Invia</button>
+                <button className='checkout-btn' type="submit">Invia</button>
             </form>
         )
     }
@@ -79,10 +81,10 @@ const CheckoutPage = (props: Props) => {
             })
     }
     return (
-        <>
+        <div className='checkout'>
             <PageTitle title={'Checkout'} />
             {isOrderSend ? renderMessage() : renderForm()}
-        </>
+        </div>
     )
 }
 export default CheckoutPage

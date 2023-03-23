@@ -3,15 +3,15 @@ import LocalPostOfficeOutlinedIcon from '@mui/icons-material/LocalPostOfficeOutl
 import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined'
 import { Link } from 'react-router-dom'
 import "./ContactsDetails.scss"
-import Map from 'components/Map/Map'
 
-type Props = {}
+type Props = {
+    nameOfClass?: string
+}
 
-const ContactsDetails = (props: Props) => {
+const ContactsDetails = ({nameOfClass = "contacts-list"}: Props) => {
     return (
         <>
-        <Map/>
-            <ul className="contacts-list">
+            <ul className={nameOfClass}>
                 <li className="address">
                     <LocationOnOutlinedIcon fontSize="small" /> CORSO DEL POPOLO
                     84 45100 ROVIGO ITALIA
