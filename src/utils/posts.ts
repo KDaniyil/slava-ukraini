@@ -57,7 +57,7 @@ export const postsArray: Post[] = [
 },
 ]
 
-export const getPostsObject = (array:Post[]) => array.reduce((object, product)=>({
+export const getPostsObject = (array:Post[]) => array.reduce((object, post)=>({
     ...object,
-    [product.id]: product,
+    [post.id]: post,
 }),{})

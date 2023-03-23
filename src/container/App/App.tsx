@@ -15,6 +15,7 @@ import Donation from 'pages/Donation/Donation'
 import CheckoutPage from 'pages/Checkout/CheckoutPage'
 import ProductPage from 'pages/Product/ProductPage'
 import CategoryPage from 'pages/CategoryPage/CategoryPage'
+import ThumbPage from 'pages/ThumbPage/ThumbPage'
 
 type Props = {}
 
@@ -40,6 +41,7 @@ const App = (props: Props) => {
                         element={<CategoryPage />}
                     />
                     <Route path="contacts" element={<Contacts />} />
+                    <Route path="favorites" element={<ThumbPage />} />
                     <Route path="shop" element={<Shopping />} />
                     <Route path="products/:id" element={<ProductPage />} />
                     <Route path="cart" element={<CartPage />} />
