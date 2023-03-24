@@ -1,3 +1,4 @@
+import { Button, TextField } from '@mui/material'
 import axios from 'axios'
 import PageTitle from 'components/PageTitle/PageTitle'
 import { useState } from 'react'
@@ -19,7 +20,7 @@ const CheckoutPage = (props: Props) => {
         return (
             <form className='checkout-form' onSubmit={orderSend}>
                 <div className="checkout-input">
-                    <input
+                    <TextField
                         type="text"
                         placeholder="Tuo nome"
                         value={orderData.name}
@@ -28,25 +29,25 @@ const CheckoutPage = (props: Props) => {
                     />
                 </div>
                 <div className="checkout-input">
-                    <input
+                    <TextField
                         type="text"
                         placeholder="Tuo indirizzo"
                         value={orderData.address}
                         onChange={handleAddress}
                     />
                 </div>
-                <button className='checkout-btn' type="submit">Invia</button>
+                <Button className='checkout-btn' type="submit">Invia</Button>
             </form>
         )
     }
     const renderMessage = () => {
         return (
             <div>
-                <div>Gentile, {orderData.name} grazie per il tuo ordine!</div>
-                <div>
+                <p className='send-text'>Gentile, {orderData.name} grazie per il tuo ordine!</p>
+                <p className='send-text'>
                     Materiale ordinato sarà inviato al seguente indirizzo:{' '}
                     {orderData.address}
-                </div>
+                </p>
             </div>
         )
     }

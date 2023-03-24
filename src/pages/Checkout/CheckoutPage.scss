@@ -9,13 +9,20 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    &-input{
-        width: 100%;
-        input{
-            width: 100%;
+    .checkout-input{
+        display: flex;
+        justify-content: center;
+    }
+    .checkout-btn{
+        background: linear-gradient(120deg,rgba(245,239,7,1) 35%,rgba(33,162,255,1) 65%);
+        transition: all 0.5s ease;
+        &:hover{
+            transform: scale(1.2);
+            box-shadow: 10px 10px 10px 3px #333;
+            transition: all 0.5s ease;
         }
     }
-    &-btn{
-        width: 100%;
-    }
+}
+.send-text{
+    font-size: 42px;
 }

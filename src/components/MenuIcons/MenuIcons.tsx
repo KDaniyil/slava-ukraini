@@ -1,9 +1,8 @@
 import FacebookIcon from '@mui/icons-material/Facebook'
-import InstagramIcon from '@mui/icons-material/Instagram'
 import { Link } from 'react-router-dom'
 import './MenuIcons.scss'
 type Props = {}
-const MenuIcons = ({}: Props) => {
+const MenuIcons = (props: Props) => {
     return (
         <div className="menu-icons">
             <p>Follow Us</p>
