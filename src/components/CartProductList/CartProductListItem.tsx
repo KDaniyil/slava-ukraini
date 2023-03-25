@@ -2,12 +2,12 @@ import { Product } from 'utils/products'
 
 type Props = {
     product: Product
-    productCout: number
+    productCount: number
 }
-const CartProductListItem = ({ product, productCout }: Props) => {
+const CartProductListItem = ({ product, productCount }: Props) => {
     return (
         <div>
-            {product.title} : {productCout}
+            {product.title} : {productCount}
         </div>
     )
 }

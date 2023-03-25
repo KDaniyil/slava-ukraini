@@ -36,7 +36,7 @@ const Comments = (props: Props) => {
     const onSend = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         if (newComment.name === '' || newComment.text === '') {
-            alert('all fields are required!')
+            alert('Tutti i campi devono essere compilati!')
         } else {
             setNewComment({
                 name: '',

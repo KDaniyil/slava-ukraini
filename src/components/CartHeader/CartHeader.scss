@@ -1,3 +1,4 @@
+@use "../../assets/styles/mixins.scss";
 @import "../../assets/styles/variables.scss";
 .cart{
     position: relative;
@@ -11,4 +12,14 @@
         border-radius: 50%;
         background-color: $light-color;
     }
+}
+.modal{
+    position: absolute;
+    top: 35px;
+    left:20px;
+    width: max-content;
+    background-color: $light-color;
+    z-index: 9999;
+    padding: 10px;
+    @include mixins.shadow-mixin;
 }
