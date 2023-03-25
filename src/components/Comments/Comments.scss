@@ -1,0 +1,33 @@
+@use "../../assets/styles/mixins.scss";
+@import "../../assets/styles/variables.scss";
+
+.comments-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    &-elements{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        textarea{
+            background: transparent;
+        }
+        .elem{
+            display: flex;
+            gap: 10px;
+            .elem-input-name{
+                flex: 45%;
+            }
+            .comments-btn{
+                flex: 45%;
+                background: $background-bts;
+                @include mixins.transition-mixin;
+                &:hover{
+                    @include mixins.shadow-mixin;
+                    @include mixins.transition-mixin;
+                }
+            }
+        }
+        
+    }
+}

@@ -7,6 +7,7 @@ import {
     Typography,
 } from '@mui/material'
 import { useState } from 'react'
+import './Comments.scss'
 
 type Props = {}
 export type Comment = {
@@ -58,29 +59,33 @@ const Comments = (props: Props) => {
                     </Card>
                 ))}
             </div>
-            <form onSubmit={onSend}>
+            <form className="comments-form" onSubmit={onSend}>
                 <Typography variant="h5" component="h5">
                     Lascia un commento:
                 </Typography>
-                <div>
+                <div className="comments-form-elements">
                     <TextareaAutosize
-                            minRows={5}
-                            placeholder="Scrivi qui"
-                            value={newComment.text}
-                            onChange={handleText}
+                        minRows={10}
+                        placeholder="Scrivi qui un commento"
+                        value={newComment.text}
+                        onChange={handleText}
                     />
-                    <br />
-                    <TextField
-                        label="Nome"
-                        value={newComment.name}
-                        onChange={handleName}
-                        placeholder="Tuo Nome"
-                    />
-                    <div>
+                    <div className="elem">
+                        <TextField
+                            className='elem-input-name'
+                            label="Nome"
+                            value={newComment.name}
+                            onChange={handleName}
+                            placeholder="Tuo Nome"
+                        />
+                        <Button
+                            className="comments-btn"
+                            variant="outlined"
+                            type="submit"
+                        >
+                            Invia
+                        </Button>
                     </div>
-                    <Button variant="outlined" type="submit">
-                        Invia
-                    </Button>
                 </div>
             </form>
         </>

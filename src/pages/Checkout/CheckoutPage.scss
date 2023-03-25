@@ -21,7 +21,7 @@
         @include mixins.animation-mixin-wiggle;
         &:hover{
             transform: scale(1.2);
-            box-shadow: 10px 10px 10px 3px #333;
+            @include mixins.shadow-mixin;
             @include mixins.transition-mixin;
         }
     }
