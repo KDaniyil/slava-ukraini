@@ -21,5 +21,20 @@
 .MuiMenu-paper{
     background-color: transparent;
 }
-
-  
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+ 
+@media (max-width: $breakpoint-laptop){
+    .menu-button{
+        display: none;
+    } 
+}
+@media (max-width: $breakpoint-tablet){
+    .cart{
+        display: none;
+    }
+}

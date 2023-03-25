@@ -7,7 +7,7 @@ type Props = {
 }
 const MenuItem = ({ to, children }: Props) => {
     return (
-        <Button>
+        <Button className='menu-button'>
             <NavLink
                 to={to}
                 className={({ isActive }) =>

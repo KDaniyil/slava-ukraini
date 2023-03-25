@@ -10,7 +10,7 @@ type Props = {
 const LinkButton = ({ to, children }: Props) => {
     return (
         <>
-            <Button size='small' className='link-button'>
+            <Button variant='outlined' size='small' className='link-button'>
               <Link to={to}>{children}</Link>
             </Button>
         </>

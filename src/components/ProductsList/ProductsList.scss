@@ -1,3 +1,4 @@
+@import "../../assets/styles/variables.scss";
 .product-card{
     .card-image {
         img{
@@ -37,4 +38,9 @@
 }
 .like-btn{
     float: right;
+}
+@media (max-width: $breakpoint-tablet) {
+    .add-btn{
+        visibility: visible;
+    }
 }

@@ -8,7 +8,7 @@ import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
 
 const Menu = () => {
     return (
-        <>
+        <div className='menu'>
             <MenuItem to="/">HOME</MenuItem>
             <MenuItem to="/about-us">CHI SIAMO</MenuItem>
             <DropdownMenu/>
@@ -20,7 +20,7 @@ const Menu = () => {
             <Button className="btn-dona">
                 <NavLink to="/donation">DONA</NavLink>
             </Button>
-        </>
+        </div>
     )
 }
 export default Menu

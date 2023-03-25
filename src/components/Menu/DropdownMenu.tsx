@@ -22,7 +22,7 @@ const DropdownMenu = (props: Props) => {
                 aria-haspopup="true"
                 aria-expanded={open ? 'true' : undefined}
                 onClick={handleClick}
-                className="menu-item"
+                className="menu-button menu-item"
                 endIcon={<KeyboardArrowDownIcon />}
             >
                 EVENTI & NEWS

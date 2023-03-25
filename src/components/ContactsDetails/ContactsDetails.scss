@@ -5,6 +5,9 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 0;
+    @media (max-width: $breakpoint-laptop) {
+        flex-direction: column;
+  }
     li, a{
         text-decoration: none;
         font-style: italic;

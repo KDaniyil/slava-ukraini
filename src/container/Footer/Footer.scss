@@ -1,12 +1,22 @@
+@import "../../assets/styles/variables.scss";
 .footer{
-    background-color: #333;
+    background-color: $dark-color;
     opacity: 0.8;
     margin-top: 50px;
-    
 }
 .footerMenu{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: whitesmoke;
+    color: $light-color;
+}
+@media (max-width: $breakpoint-tablet) {
+    .donation-details, .footer-list{
+        display: none;
+    }
+}
+@media (max-width: $breakpoint-laptop) {
+    .donation-details, .footer-list{
+        font-size: 12px;
+    }
 }

@@ -51,3 +51,9 @@
         @include mixins.transition-mixin;
     }
   }
+
+  @media (max-width: $breakpoint-tablet) {
+    .swiper{
+        display:none;
+    }    
+  }

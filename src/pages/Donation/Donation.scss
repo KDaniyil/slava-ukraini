@@ -1,5 +1,9 @@
+@import "../../assets/styles/variables.scss";
 .donate-text{
     span{
         font-style: italic;
     }
+    @media (max-width: $breakpoint-tablet) {
+        font-size: 24px;
+  }
 }

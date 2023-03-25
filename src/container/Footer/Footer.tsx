@@ -10,7 +10,7 @@ const Footer = (props: Props) => {
             <Container>
                 <div className="footerMenu">
                     <Logo />
-                    <div>Puoi fare la tua donazione qua: <br /> Slava Ukraini OdV <br /> IBAN IT45Y0103012260000002133202</div>
+                    <div className='donation-details'>Puoi fare la tua donazione qua: <br /> Slava Ukraini OdV <br /> IBAN IT45Y0103012260000002133202</div>
                     <ContactsDetails nameOfClass='footer-list'/>
                     <MenuIcons />
                 </div>
