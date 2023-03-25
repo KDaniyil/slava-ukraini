@@ -1,3 +1,5 @@
+@use "../../assets/styles/mixins.scss";
+@import "../../assets/styles/variables.scss";
 .slide{
     position: relative;
     img{
@@ -7,7 +9,7 @@
     }
     .slide-description {
         position: absolute;
-        color: whitesmoke;
+        color: $light-color;
         top: 50px;
         left: 50px;
         h3{
@@ -22,14 +24,14 @@
     width: 20px;
     height: 20px;
     opacity: 0.4;
-    background: #333;
+    background: $dark-color;
     &:hover{
-        background: whitesmoke;
+        background: $light-color;
         opacity: 0.2;
     }
   }
   .swiper-pagination-bullet-active {
-    background: whitesmoke;
+    background: $light-color;
     &:hover{
         opacity: 1;
     }
@@ -39,13 +41,13 @@
     width: 60px;
     height: 60px;
     opacity: 0.2;
-    color: whitesmoke;
-    transition: all .5s ease;
+    color: $light-color;
+    @include mixins.transition-mixin;
 
     &:hover{
         opacity: 1;
         border: 1px solid whitesmoke;
         transform:scale(1.2);
-        transition: all .5s ease;
+        @include mixins.transition-mixin;
     }
   }

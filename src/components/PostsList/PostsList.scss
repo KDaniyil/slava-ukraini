@@ -1,14 +1,16 @@
+@use "../../assets/styles/mixins.scss";
+@import "../../assets/styles/variables.scss";
 .posts-container{
     margin-bottom: 30px;
 }
 .post-image img{
     width: 100%;
     height: 200px;
-    transition: all .5s ease;
+    @include mixins.transition-mixin;
     &:hover{
         cursor: pointer;
         transform: scale(1.1);
-        transition: all .5s ease;
+        @include mixins.transition-mixin;
     }
 }
 .post-date{
@@ -21,8 +23,8 @@
     justify-content: space-between;
 }
 .thumb{
-    color: #333;
-    background: linear-gradient(180deg, rgba(33,162,255,1) 35%, rgba(245,239,7,1) 65%);
+    color: $dark-color;
+    background: $background-bts;
     border-radius: 50%;
     min-width: 30px;
     height: 30px;

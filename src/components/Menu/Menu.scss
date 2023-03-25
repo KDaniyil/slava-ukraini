@@ -1,15 +1,13 @@
+@use "../../assets/styles/mixins.scss";
+@import "../../assets/styles/variables.scss";
 .btn-dona{
     margin-left: 50px;
-    background: linear-gradient(120deg, rgba(33,162,255,1) 35%, rgba(245,239,7,1) 65%);
-    animation: wiggle 2s linear infinite;
-    transition: all .5s ease;
+    background: $background-bts;
+    @include mixins.animation-mixin-wiggle;
+    @include mixins.transition-mixin;
     a{
         text-decoration: none;
-        color: #333;
-    }
-    &:hover{
-        background: linear-gradient(120deg,rgba(245,239,7,1) 35%,rgba(33,162,255,1) 65%);
-        transition: all .5s ease;
+        color: $dark-color;
     }
 }
 .menu-item-active{
@@ -18,33 +16,10 @@
 }
 .menu-item{
     text-decoration: none;
-    color:whitesmoke;
+    color: $light-color;
 }
 .MuiMenu-paper{
     background-color: transparent;
 }
-@keyframes wiggle {
-    0%, 7% {
-      transform: rotateZ(0);
-      scale: 1.2;
-    }
-    15% {
-      transform: rotateZ(-15deg);
-    }
-    20% {
-      transform: rotateZ(10deg);
-    }
-    25% {
-      transform: rotateZ(-10deg);
-    }
-    30% {
-      transform: rotateZ(6deg);
-    }
-    35% {
-      transform: rotateZ(-4deg);
-    }
-    40%, 100% {
-      transform: rotateZ(0);
-    }
-  }
+
   

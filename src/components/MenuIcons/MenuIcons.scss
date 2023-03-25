@@ -1,20 +1,15 @@
+@import "../../assets/styles/variables.scss";
 .menu-icons{
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 10px;
     a{
-        color: whitesmoke;
+        color: $light-color;
     }
     .icon-fb{
         &:hover{
             color: rgb(50, 168, 252);
-            transition: all .3s ease;
-        }
-    }
-    .icon-insta{
-        &:hover{
-            color: purple;
             transition: all .3s ease;
         }
     }

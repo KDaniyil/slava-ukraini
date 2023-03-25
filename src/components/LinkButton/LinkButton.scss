@@ -1,18 +1,20 @@
+@use "../../assets/styles/mixins.scss";
+@import "../../assets/styles/variables.scss";
+
 .link-button{
-    color: #333;
-    transition: all 0.5s ease;
+    color: $dark-color;
+    @include mixins.transition-mixin;
     a{
-        color: #333;
+        color: $dark-color;
         text-decoration: none;
         &:hover{
-            color:whitesmoke;
+            color: $light-color;
             text-decoration:underline;
         }
     }
     &:hover{
-        color: whitesmoke;
-        background: #333;
+        background: $dark-color;
         transform: scale(1.2);
-        transition: all 0.5s ease;
+        @include mixins.transition-mixin;
     }
 }

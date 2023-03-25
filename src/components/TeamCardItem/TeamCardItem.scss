@@ -1,11 +1,13 @@
+@use "../../assets/styles/mixins.scss";
+@import "../../assets/styles/variables.scss";
 .team-card{
-    background-color: #333;
-    color: whitesmoke;
-    transition: all .5s ease;
+    background-color: $dark-color;
+    color: $light-color;
+    @include mixins.transition-mixin;
     &:hover{
         cursor: pointer;
         transform: scale(1.1);
-        transition: all .5s ease;
+        @include mixins.transition-mixin;
     }
 }
 .team-card-image {

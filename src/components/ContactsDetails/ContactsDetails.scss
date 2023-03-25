@@ -1,3 +1,4 @@
+@import "../../assets/styles/variables.scss";
 .contacts-list{
     list-style: none;
     display: flex;
@@ -9,7 +10,7 @@
         font-style: italic;
         font-size: 20px;
         margin-top: 30px;
-        color: #333;
+        color: $dark-color;
     }
     
 }
@@ -30,6 +31,6 @@
         font-style: italic;
         font-size: 16px;
         margin-top: 30px;
-        color: whitesmoke;
+        color: $light-color;
     }
 }

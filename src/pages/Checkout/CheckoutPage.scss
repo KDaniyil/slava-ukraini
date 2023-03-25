@@ -1,3 +1,5 @@
+@use "../../assets/styles/mixins.scss";
+@import "../../assets/styles/variables.scss";
 .checkout{
     display: flex;
     flex-direction: column;
@@ -14,12 +16,13 @@
         justify-content: center;
     }
     .checkout-btn{
-        background: linear-gradient(120deg,rgba(245,239,7,1) 35%,rgba(33,162,255,1) 65%);
-        transition: all 0.5s ease;
+        background: $background-bts;
+        @include mixins.transition-mixin;
+        @include mixins.animation-mixin-wiggle;
         &:hover{
             transform: scale(1.2);
             box-shadow: 10px 10px 10px 3px #333;
-            transition: all 0.5s ease;
+            @include mixins.transition-mixin;
         }
     }
 }
