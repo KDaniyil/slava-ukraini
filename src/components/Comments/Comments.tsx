@@ -51,7 +51,7 @@ const Comments = (props: Props) => {
         <>
             <div>
                 {comments.map((comment, index) => (
-                    <Card variant="outlined" key={index}>
+                    <Card className='newComment' variant="outlined" key={index}>
                         <CardContent>
                             <div>Nome: {comment.name}</div>
                             <p>{comment.text}</p>

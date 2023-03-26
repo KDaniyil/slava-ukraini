@@ -1,6 +1,8 @@
 @use "../../assets/styles/mixins.scss";
 @import "../../assets/styles/variables.scss";
-
+.newComment{
+    background: transparent;
+}
 .comments-form{
     display: flex;
     flex-direction: column;
