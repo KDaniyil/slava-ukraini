@@ -1,40 +1,114 @@
 @use "../../assets/styles/mixins.scss";
 @import "../../assets/styles/variables.scss";
-.btn-dona{
+
+.btn-dona {
     margin-left: 50px;
     background: $background-bts;
     @include mixins.animation-mixin-wiggle;
-    @include mixins.transition-mixin;
-    a{
+
+    a {
         text-decoration: none;
         color: $dark-color;
     }
 }
-.menu-item-active{
+
+.menu-item-active {
     text-decoration: none;
     color: #F5EF07;
 }
-.menu-item{
+
+.menu-item {
     text-decoration: none;
     color: $light-color;
+    position: relative;
+    @include mixins.transition-mixin;
+
+    &:hover {
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #F5EF07;
+            @include mixins.transition-mixin;
+        }
+    }
 }
-.MuiMenu-paper{
-    background-color: transparent;
+
+.MuiMenu-paper {
+    background-color: $dark-color;
+    opacity: 0.7 !important;
 }
-.menu{
+
+.menu {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     width: 100%;
 }
- 
-@media (max-width: $breakpoint-laptop){
-    .menu-button{
-        display: none;
-    } 
+
+.btn-burger {
+    display: none;
+    min-height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid $light-color;
+    color: $light-color;
+    background: transparent;
+    cursor: pointer;
+    margin-left: 20px;
+    @include mixins.transition-mixin;
+
+    &:hover {
+        color: $blue-color;
+        border-color: $blue-color;
+        @include mixins.transition-mixin;
+    }
 }
-@media (max-width: $breakpoint-tablet){
-    .cart{
+
+@media (max-width: $breakpoint-laptop) {
+    .cart {
         display: none;
+    }
+
+    .btn-dona {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .btn-burger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 5px;
+        width: 100%;
+        height: 0;
+        border-top: 1px solid $light-color;
+        background: $dark-color;
+        opacity: 1;
+        position: fixed;
+        left: 0;
+        top: 82px;
+        overflow: hidden;
+        @include mixins.transition-mixin;
+    }
+
+    .menu.active {
+        height: calc(100vh - 82px);
+        @include mixins.transition-mixin;
+    }
+    .MuiMenu-list{
+        display: flex;
+        flex-direction: column;
     }
 }

@@ -26,20 +26,20 @@ const App = (props: Props) => {
                 <Header />
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="posts/:id" element={<SinglePost />} />
-                    <Route path="about-us" element={<AboutUs />} />
-                    <Route path="posts" element={<NewsEvents />} />
+                    <Route path="/posts/:id" element={<SinglePost />} />
+                    <Route path="/about-us" element={<AboutUs />} />
+                    <Route path="/posts" element={<NewsEvents />} />
                     <Route
-                        path="category/:category"
+                        path="/category/:category"
                         element={<CategoryPage />}
                     />
-                    <Route path="contacts" element={<Contacts />} />
-                    <Route path="favorites" element={<ThumbPage />} />
-                    <Route path="shop" element={<Shopping />} />
+                    <Route path="/contacts" element={<Contacts />} />
+                    <Route path="/favorites" element={<ThumbPage />} />
+                    <Route path="/shop" element={<Shopping />} />
 
-                    <Route path="cart" element={<CartPage />} />
-                    <Route path="checkout" element={<CheckoutPage />} />
-                    <Route path="donation" element={<Donation />} />
+                    <Route path="/cart" element={<CartPage />} />
+                    <Route path="/checkout" element={<CheckoutPage />} />
+                    <Route path="/donation" element={<Donation />} />
                 </Routes>
                 <Footer />
             </StyledEngineProvider>

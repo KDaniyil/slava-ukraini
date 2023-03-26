@@ -1,5 +1,11 @@
+@import "../../assets/styles/variables.scss";
 .app-bar{
-    background-color: #333;
-    color: whitesmoke;
+    background-color: $dark-color;
+    color: $light-color;
     opacity: 0.8;
+}
+@media (max-width: $breakpoint-tablet){
+    .app-bar{
+        opacity: 1;
+    }
 }

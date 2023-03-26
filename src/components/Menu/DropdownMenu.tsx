@@ -22,13 +22,14 @@ const DropdownMenu = (props: Props) => {
                 aria-haspopup="true"
                 aria-expanded={open ? 'true' : undefined}
                 onClick={handleClick}
-                className="menu-button menu-item"
+                className="menu-item"
                 endIcon={<KeyboardArrowDownIcon />}
             >
                 EVENTI & NEWS
             </Button>
             <Menu
                 id="drop-menu"
+                className='drop-submenu'
                 aria-labelledby="drop-button"
                 anchorEl={anchorEl}
                 open={open}
