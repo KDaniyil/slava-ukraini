@@ -25,7 +25,7 @@ const PostsListItem = ({ post }: Props) => {
                     <LinkButton to={`/category/${post.category}`}>{post.category}</LinkButton>
                 </div>
                 <div className="post-title">{post.title}</div>
-                <div className="post-text">{post.text}</div>
+                <p className="post-text">{post.text}</p>
             </CardContent>
             <CardActions className='action-btns'>
                 <LinkButton to={`/posts/${post.id}`}>

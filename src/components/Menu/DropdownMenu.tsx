@@ -41,6 +41,7 @@ const DropdownMenu = (props: Props) => {
                 <MenuItem to="category/testimonianze">Testimonianze</MenuItem>
                 <MenuItem to="category/raccolta">Raccolta</MenuItem>
                 <MenuItem to="category/news">News</MenuItem>
+                <MenuItem to="category/manifestazioni">Manifestazioni</MenuItem>
                 <MenuItem to="posts">Tutto</MenuItem>
             </Menu>
         </div>

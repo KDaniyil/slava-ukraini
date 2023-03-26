@@ -25,7 +25,7 @@ const SinglePost = ({ postsObject = getPostsObject(postsArray) }: Props) => {
                         <LinkButton to={`/category/${post.category}`}>{post.category}</LinkButton>
                     </div>
                 </div>
-                <p className="single-post-text">{post.text}</p>
+                <p className="single-post-text">{post.fullDesc}</p>
             </div>
             <Comments />
         </Container>
